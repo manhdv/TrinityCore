@@ -413,6 +413,9 @@ class TC_GAME_API LFGMgr
         /// Sends queue status to player
         static void SendLfgQueueStatus(ObjectGuid guid, LfgQueueStatusData const& data);
 
+        //Solo LFG
+        bool IsSoloLFG() const { return true; }
+
     private:
         uint8 GetTeam(ObjectGuid guid);
         void RestoreState(ObjectGuid guid, char const* debugMsg);
